@@ -11,12 +11,12 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.7.0",
+    "@tanstack/react-virtual": "^3.13.6",
     "lodash.debounce": "^4.0.8",
     "papaparse": "^5.5.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-redux": "^9.2.0",
-    "react-window": "^1.8.11",
     "redux-persist": "^6.0.0"
   },
   "devDependencies": {
