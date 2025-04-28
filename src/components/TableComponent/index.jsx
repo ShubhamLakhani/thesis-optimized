@@ -10,23 +10,23 @@ const TableComponent = () => {
   const columns = Object.keys(filteredData[0]);
 
   const DataRow = ({ index }) => (
-    <div className="grid grid-cols-10 gap-4">
+    <tr className=" hover:bg-gray-50 align-middle">
       {columns.map((column, i) => (
-        <div className="" key={i}>
+        <td className="px-4 py-4 border-b text-left" key={i}>
           {filteredData[index][column]?.toString().startsWith("http") ? (
             <img
               src={filteredData[index][column]}
               alt="img"
-              width="50"
-              height="50"
-              className="rounded-full"
+              width="150"
+              height="150"
+              className="rounded-full object-cover"
             />
           ) : (
-            <p>{filteredData[index][column]}</p>
+            <p className="text-gray-700 text-sm">{filteredData[index][column]}</p>
           )}
-        </div>
+        </td>
       ))}
-    </div>
+    </tr>
   );
 
   return (
@@ -66,10 +66,10 @@ const TableComponent = () => {
       </table> */}
       <List
         className="mt-8"
-        height={500}
+        height={800}
         itemCount={filteredData.length}
         itemSize={50}
-        width={1024}
+        width='100%'
       >
         {DataRow}
       </List>

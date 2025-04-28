@@ -24,13 +24,13 @@ const ImportFile = () => {
                 className="border-2 border-dashed border-gray-300 rounded-lg p-8 flex flex-col items-center justify-center text-center space-y-2 cursor-pointer hover:border-blue-400 transition-colors"
             >
             <span className='flex w-[24px] ml-2 h-[24px] items-center justify-center'>
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1M12 12V4m0 0l-4 4m4-4l4 4" />
             </svg>
             </span>
             <p className="text-sm text-gray-600">
-                <span className="font-medium text-white">Drop your file here or </span>
-                <span className="text-white underline">Browse</span>
+                <span className="font-medium ">Drop your file here or </span>
+                <span className=" underline">Browse</span>
             </p>
             <p className="text-xs text-gray-400">Maximum file size 50mb</p>
             <input

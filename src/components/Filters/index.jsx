@@ -5,7 +5,7 @@ const Filters = ({ allFilters, setAllFilters, sortingBy, setSortingBy, sortingOr
     <div className="flex justify-between items-center space-x-4 ">
       <div className="flex space-x-4">
         <select
-          className="py-2 px-4 rounded-[10px] border-2 border-gray-800"
+          className="py-2 px-4 rounded-[10px] border border-gray-80"
           onChange={(e) =>
             setAllFilters({ ...allFilters, category: e.target.value })
           }
@@ -18,7 +18,7 @@ const Filters = ({ allFilters, setAllFilters, sortingBy, setSortingBy, sortingOr
           )}
         </select>
         <select
-          className="py-2 px-4 rounded-[10px] border-2 border-gray-800"
+          className="py-2 px-4 rounded-[10px] border border-gray-80"
           onChange={(e) =>
             setAllFilters({ ...allFilters, brand: e.target.value })
           }
@@ -31,7 +31,7 @@ const Filters = ({ allFilters, setAllFilters, sortingBy, setSortingBy, sortingOr
           )}
         </select>
         <select
-          className="py-2 px-4 rounded-[10px] border-2 border-gray-800"
+          className="py-2 px-4 rounded-[10px] border border-gray-80"
           onChange={(e) =>
             setAllFilters({ ...allFilters, discounted: e.target.value })
           }
@@ -46,7 +46,7 @@ const Filters = ({ allFilters, setAllFilters, sortingBy, setSortingBy, sortingOr
           Sort by:
         </label>
         <select
-          className="py-2 px-4 rounded-[10px] border-2 border-gray-800"
+          className="py-2 px-4 rounded-[10px] border border-gray-80"
           value={sortingBy}
           onChange={(e) => setSortingBy(e.target.value)}
         >
@@ -64,8 +64,8 @@ const Filters = ({ allFilters, setAllFilters, sortingBy, setSortingBy, sortingOr
               setSortingOrder((prev) => (prev === "asc" ? "desc" : "asc"))
             }
           />
-          <div className="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600"></div>
-          <span className="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">
+          <div className="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer  peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600"></div>
+          <span className="ms-3 text-sm font-medium text-gray-900 ">
             Order {sortingOrder}
           </span>
         </label>
