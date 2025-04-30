@@ -1,5 +1,6 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Select from "react-select";
+import { setExtractedData, setFilteredData } from "../../store/dataSlice";
 
 const Filters = ({ allFilters, setAllFilters, sortingBy, setSortingBy, sortingOrder, setSortingOrder, filterOptions,}) => {
   const categoryOptions = filterOptions.category.map((Categories) => ({
@@ -19,6 +20,15 @@ const Filters = ({ allFilters, setAllFilters, sortingBy, setSortingBy, sortingOr
     { value: 'price', label: 'Price' },
     { value: 'rating', label: 'Rating' },
   ];
+
+    const dispatch = useDispatch();
+  
+
+  const onClearData = () => {
+    localStorage.removeItem("extractedData");
+    dispatch(setExtractedData([]));
+    dispatch(setFilteredData([]))
+  }
   return (
     <div className="flex justify-between items-center space-x-4 ">
       <div className="flex space-x-4 relative z-50">
@@ -202,6 +212,7 @@ const Filters = ({ allFilters, setAllFilters, sortingBy, setSortingBy, sortingOr
             Order {sortingOrder}
           </span>
         </label>
+        <button onClick={onClearData} className="p-2 bg-white rounded-full text-red-400 hover:text-gray-500 dark:bg-gray-800 dark:text-gray-300 dark:hover:text-gray-200">Clear </button>
       </div>
     </div>
   );
