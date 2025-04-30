@@ -21,7 +21,7 @@ const Filters = ({ allFilters, setAllFilters, sortingBy, setSortingBy, sortingOr
   ];
   return (
     <div className="flex justify-between items-center space-x-4 ">
-      <div className="flex space-x-4">
+      <div className="flex space-x-4 relative z-50">
         <Select
           options={categoryOptions}
           placeholder="Categories"
@@ -146,7 +146,7 @@ const Filters = ({ allFilters, setAllFilters, sortingBy, setSortingBy, sortingOr
           }}
         />
       </div>
-      <div className="flex space-x-4 items-center">
+      <div className="flex space-x-4 items-center relative z-50">
         <Select
           options={sortOptions}
           value={
